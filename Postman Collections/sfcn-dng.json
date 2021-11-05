@@ -1,0 +1,389 @@
+{
+  "info": {
+    "_postman_id": "b6123e80-0a2c-437d-b30e-23d5b39a3f99",
+    "name": "SFCN-DNG",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Onboarding",
+      "item": [
+        {
+          "name": "Create Device",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "62b1eaf7-eb2f-4309-804a-24b63d16f94d",
+                "exec": [
+                  "const device = pm.response.json();",
+                  "pm.environment.set(\"deviceUid\", device.uid);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "955f3aa0-fc7f-460b-8646-d2f56bb17aef",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"burak-crush-dng\",\n    \"deviceType\": \"SFCN_DNG\",\n    \"larUid\": null,\n    \"larType\": \"CDG\"\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{aegisBaseUrl}}/targets/devices"
+          },
+          "response": []
+        },
+        {
+          "name": "Get specific device",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f71efbbf-faad-471d-b762-eed3a007b148",
+                "exec": [
+                  "var expectedHttpStatus = 200;",
+                  "var maxNumberOfTries = 10;",
+                  "var sleepBetweenTries = 1000;",
+                  "const expectedState = '$PRE_WAIT_FOR_TOKEN_AND_NAMESPACE';",
+                  "",
+                  "if (!pm.environment.get(\"collection_tries\")) {",
+                  "    pm.environment.set(\"collection_tries\", 1);",
+                  "}",
+                  "",
+                  "if ((pm.response.code != expectedHttpStatus || pm.response.json().state != expectedState) && (pm.environment.get(\"collection_tries\") < maxNumberOfTries)) {",
+                  "     var tries = parseInt(pm.environment.get(\"collection_tries\"), 10);",
+                  "     pm.environment.set(\"collection_tries\", tries + 1);",
+                  "     setTimeout(function() {}, sleepBetweenTries);",
+                  "     postman.setNextRequest(request.name);",
+                  " } else {",
+                  "     pm.environment.unset(\"collection_tries\");",
+                  "     pm.test(\"Status code is \" + expectedHttpStatus, function () {",
+                  "          pm.response.to.have.status(expectedHttpStatus);",
+                  "     });",
+                  "     const specificDevice = pm.response.json();",
+                  "     pm.environment.set(\"specificDeviceUid\", specificDevice.uid);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "91af901f-6078-46bb-9585-2bb2c5976b5d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{aegisEnv}}/aegis/rest/v1/device/{{deviceUid}}/specific-device",
+            "description": "This request must be executed as part of the collection"
+          },
+          "response": []
+        },
+        {
+          "name": "Enter Credentials",
+          "_postman_id": "04196a52-df1e-47e3-aefb-b5ec12dc031b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"stateMachineContext\": {\n        \"TOKEN\": \"{{sfcnToken}}\",\n        \"NAMESPACE\": \"{{sfcnNamespace}}\",\n        \"URL\": \"{{sfcnUrl}}\"\n    }\n}\n",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{aegisBaseUrl}}/duo/dngs/{{specificDeviceUid}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Wait for onboarding to complete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2cce6a16-a301-426c-9faf-5fc1b9e1664a",
+                "exec": [
+                  "const expectedState = 'DONE';",
+                  "const maxNumberOfTries = 20;",
+                  "const sleepBetweenTries = 1000;",
+                  "",
+                  "if (!pm.environment.get(\"collection_tries\")) {",
+                  "    pm.environment.set(\"collection_tries\", 1);",
+                  "}",
+                  "",
+                  "const specificDevice = pm.response.json();",
+                  "if (specificDevice.state != expectedState && pm.environment.get('collection_tries') < maxNumberOfTries) {",
+                  "    const tries = parseInt(pm.environment.get(\"collection_tries\"), 20);",
+                  "     pm.environment.set(\"collection_tries\", tries + 1);",
+                  "     setTimeout(function() {}, sleepBetweenTries);",
+                  "     postman.setNextRequest(request.name);",
+                  "} else {",
+                  "    console.log('done!');",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "16781cff-f49c-4671-b357-fd82bdc56fa0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{aegisBaseUrl}}/duo/dngs/{{specificDeviceUid}}",
+            "description": "This request must be executed as part of the collection"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "8e5c41bb-dc15-48a2-9869-c18922edb1ef",
+      "description": "Onboard SFCN-DNG device"
+    },
+    {
+      "name": "Modify existing Protected Web Application",
+      "item": [
+        {
+          "name": "List SFCN-DNG devices",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "be883694-67c2-43b4-9ecd-eb72160b8244",
+                "exec": [
+                  "const devices = pm.response.json();",
+                  "const deviceUids = [];",
+                  "devices.forEach((device) => {",
+                  "    deviceUids.push(device.uid);",
+                  "});",
+                  "pm.collectionVariables.set(\"sfcnDngDeviceUids\", deviceUids);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "9a135646-e0c0-4731-a0e8-356aa03137db",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:SFCN_DNG",
+              "host": [
+                "{{aegisBaseUrl}}"
+              ],
+              "path": [
+                "targets",
+                "devices"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "deviceType:SFCN_DNG",
+                  "description": "Query Parameter"
+                }
+              ]
+            },
+            "description": "Set the `devicesQuery` variable to execute a custom query"
+          },
+          "response": []
+        },
+        {
+          "name": "Get list of Duo Protected Web Applications for devices",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "03a557f2-8981-450f-81e6-41583735fd97",
+                "exec": [
+                  "const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
+                  "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
+                  "console.log(`Query params: ${queryParam}`);",
+                  "pm.request.url.query.add(`q=${queryParam}`);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "745f2675-f85a-4e3e-8e72-b9abb1dc5c8f",
+                "exec": [
+                  "const webApplications = pm.response.json();",
+                  "const firstWebApp = _.first(webApplications);",
+                  "if (firstWebApp !== undefined) {",
+                  "    const firstWebAppUid = _.get(firstWebApp, 'uid');",
+                  "    const firstDeviceUid = _.get(firstWebApp, 'deviceUid');",
+                  "    console.log(`first webapp UID: ${firstWebAppUid}`);",
+                  "    pm.collectionVariables.set(\"webAppUid\", firstWebAppUid);",
+                  "    pm.collectionVariables.set(\"modifiedDeviceUid\", firstDeviceUid);",
+                  "} else {",
+                  "    throw new Error(\"This set of queries does not work if there are no web applications\");",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "c06c2dfd-7346-4269-a4e9-5ee4d8745ce3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": "{{aegisBaseUrl}}/dng/webapplications"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Duo Protected Web Applications",
+          "_postman_id": "98c3b04b-fb70-4dd3-965b-b9bd4b1fa55c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"burak-crush-pineapple\"\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{aegisBaseUrl}}/dng/webapplications/{{webAppUid}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Wait for device to be Not Synced",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9de5fc42-8ce6-41f9-ae19-30a458c7d5f1",
+                "exec": [
+                  "const device = pm.response.json();",
+                  "const waitBetweenTries = 3000;",
+                  "const numTries = pm.environment.get('numTries') || 0;",
+                  "if (device.configState !== 'NOT_SYNCED') {",
+                  "    console.log('Device not NOT_SYNCED yet. Trying again...');",
+                  "    setTimeout(() => {}, waitBetweenTries);",
+                  "    postman.setNextRequest(pm.info.requestId)",
+                  "} else {",
+                  "    console.log('Successfully waited for device to be NOT_SYNCED');",
+                  "    pm.environment.unset('numTries');",
+                  "    pm.collectionVariables.unset('modifiedDeviceUid');",
+                  "    pm.collectionVariables.unset('sfcnDngDeviceUids');",
+                  "    pm.collectionVariables.unset('webAppUid');",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "02f4503d-1f54-4b08-b29d-359d65ed4ce9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{aegisBaseUrl}}/targets/devices/{{modifiedDeviceUid}}"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "573a0ace-c294-4d00-b926-f352e8a0845c"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "{{apiToken}}"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "4b1df88c-6cf7-4960-8ce0-1d61befe318e",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "9d4eacfa-68fc-41e4-b31c-69dd55572828",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "9d7ada58-7757-4a7b-8a93-a1fbf8d490a2",
+      "key": "queryParameter",
+      "value": "q=deviceType:SFCN_DNG",
+      "type": "string"
+    },
+    {
+      "id": "91638ffb-3f49-457a-b3e2-a42eec66b47a",
+      "key": "modifiedDevieUid",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
