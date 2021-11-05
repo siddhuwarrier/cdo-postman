@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "83fba3bf-6745-4cb0-b9d5-0be5bb2cd408",
+    "name": "Duo Admin Panel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Find Duo Admin Panel Devices",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "afb4903d-2380-429b-be61-8007d47ae877",
+            "exec": [
+              "const devices = pm.response.json();",
+              "const deviceUids = [];",
+              "devices.forEach((device) => {",
+              "    deviceUids.push(device.uid);",
+              "});",
+              "pm.environment.set(\"deviceUids\", deviceUids);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "9d2da1ef-e678-44f3-ab99-28e780149814",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:DUO_ADMIN_PANEL",
+          "host": [
+            "{{aegisBaseUrl}}"
+          ],
+          "path": [
+            "targets",
+            "devices"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "deviceType:DUO_ADMIN_PANEL",
+              "description": "Query Parameter"
+            }
+          ]
+        },
+        "description": "Set the `devicesQuery` variable to execute a custom query"
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "{{apiToken}}"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "546699ea-180e-408e-ad14-15fcc38f754d",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "6ad02fc5-3b87-4e45-968f-32e71ec26bda",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
