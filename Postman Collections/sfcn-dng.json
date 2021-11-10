@@ -23,7 +23,7 @@
               }
             }
           ],
-          "_postman_id": "955f3aa0-fc7f-460b-8646-d2f56bb17aef",
+          "id": "955f3aa0-fc7f-460b-8646-d2f56bb17aef",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -38,10 +38,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"burak-crush-dng\",\n    \"deviceType\": \"SFCN_DNG\",\n    \"larUid\": null,\n    \"larType\": \"CDG\"\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n    \"name\": \"burak-crush-dng\",\n    \"deviceType\": \"SFCN_DNG\",\n    \"larUid\": null,\n    \"larType\": \"CDG\"\n}"
             },
             "url": "{{aegisBaseUrl}}/targets/devices"
           },
@@ -82,7 +79,7 @@
               }
             }
           ],
-          "_postman_id": "91af901f-6078-46bb-9585-2bb2c5976b5d",
+          "id": "91af901f-6078-46bb-9585-2bb2c5976b5d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -96,7 +93,7 @@
         },
         {
           "name": "Enter Credentials",
-          "_postman_id": "04196a52-df1e-47e3-aefb-b5ec12dc031b",
+          "id": "04196a52-df1e-47e3-aefb-b5ec12dc031b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -111,10 +108,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"stateMachineContext\": {\n        \"TOKEN\": \"{{sfcnToken}}\",\n        \"NAMESPACE\": \"{{sfcnNamespace}}\",\n        \"URL\": \"{{sfcnUrl}}\"\n    }\n}\n",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n    \"stateMachineContext\": {\n        \"TOKEN\": \"{{sfcnToken}}\",\n        \"NAMESPACE\": \"{{sfcnNamespace}}\",\n        \"URL\": \"{{sfcnUrl}}\"\n    }\n}\n"
             },
             "url": "{{aegisBaseUrl}}/duo/dngs/{{specificDeviceUid}}"
           },
@@ -150,7 +144,7 @@
               }
             }
           ],
-          "_postman_id": "16781cff-f49c-4671-b357-fd82bdc56fa0",
+          "id": "16781cff-f49c-4671-b357-fd82bdc56fa0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -163,7 +157,7 @@
           "response": []
         }
       ],
-      "_postman_id": "8e5c41bb-dc15-48a2-9869-c18922edb1ef",
+      "id": "8e5c41bb-dc15-48a2-9869-c18922edb1ef",
       "description": "Onboard SFCN-DNG device"
     },
     {
@@ -188,7 +182,7 @@
               }
             }
           ],
-          "_postman_id": "9a135646-e0c0-4731-a0e8-356aa03137db",
+          "id": "9a135646-e0c0-4731-a0e8-356aa03137db",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -259,7 +253,7 @@
               }
             }
           ],
-          "_postman_id": "c06c2dfd-7346-4269-a4e9-5ee4d8745ce3",
+          "id": "c06c2dfd-7346-4269-a4e9-5ee4d8745ce3",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -278,7 +272,7 @@
         },
         {
           "name": "Update Duo Protected Web Applications",
-          "_postman_id": "98c3b04b-fb70-4dd3-965b-b9bd4b1fa55c",
+          "id": "98c3b04b-fb70-4dd3-965b-b9bd4b1fa55c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -293,10 +287,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"burak-crush-pineapple\"\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n    \"name\": \"burak-crush-pineapple\"\n}"
             },
             "url": "{{aegisBaseUrl}}/dng/webapplications/{{webAppUid}}"
           },
@@ -329,7 +320,7 @@
               }
             }
           ],
-          "_postman_id": "02f4503d-1f54-4b08-b29d-359d65ed4ce9",
+          "id": "02f4503d-1f54-4b08-b29d-359d65ed4ce9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -341,7 +332,7 @@
           "response": []
         }
       ],
-      "_postman_id": "573a0ace-c294-4d00-b926-f352e8a0845c"
+      "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
     }
   ],
   "auth": {
@@ -374,16 +365,19 @@
   ],
   "variable": [
     {
-      "id": "9d7ada58-7757-4a7b-8a93-a1fbf8d490a2",
+      "id": "ca3e1704-4a3b-47ee-a90d-553989d5b462",
       "key": "queryParameter",
-      "value": "q=deviceType:SFCN_DNG",
-      "type": "string"
+      "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "91638ffb-3f49-457a-b3e2-a42eec66b47a",
+      "id": "881810fd-0773-4815-a270-69d9db7cedfa",
       "key": "modifiedDevieUid",
-      "value": "",
-      "type": "string"
+      "value": ""
+    },
+    {
+      "id": "83cac546-3c21-43b2-a66c-3467d9b7a3d0",
+      "key": "sfcnDngDeviceUids",
+      "value": ""
     }
   ]
 }
