@@ -24,7 +24,7 @@
           }
         }
       ],
-      "_postman_id": "9d2da1ef-e678-44f3-ab99-28e780149814",
+      "id": "9d2da1ef-e678-44f3-ab99-28e780149814",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -55,6 +55,19 @@
           ]
         },
         "description": "Set the `devicesQuery` variable to execute a custom query"
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "4f3e4b46-47db-4ee4-a483-fe2d592de94d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
       },
       "response": []
     }
