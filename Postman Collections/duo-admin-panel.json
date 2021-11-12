@@ -59,7 +59,7 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "Get Duo Admin Panel Applications",
       "id": "4f3e4b46-47db-4ee4-a483-fe2d592de94d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
