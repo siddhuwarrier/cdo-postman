@@ -60,6 +60,21 @@
     },
     {
       "name": "Get Duo Admin Panel Applications",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "37cc4d9a-8f83-4d5a-88bd-213a67cd8c27",
+            "exec": [
+              "const deviceUids = pm.environment.get(\"deviceUids\") || [];",
+              "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
+              "console.log(`Query params: ${queryParam}`);",
+              "pm.request.url.query.add(`q=${queryParam}`);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "4f3e4b46-47db-4ee4-a483-fe2d592de94d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -67,7 +82,26 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": {
+          "raw": "{{aegisBaseUrl}}/duo/applications?q=deviceUid:f360ae10-fe7d-4c4d-88c4-d4df7b67dda6&agg=count",
+          "host": [
+            "{{aegisBaseUrl}}"
+          ],
+          "path": [
+            "duo",
+            "applications"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "deviceUid:f360ae10-fe7d-4c4d-88c4-d4df7b67dda6"
+            },
+            {
+              "key": "agg",
+              "value": "count"
+            }
+          ]
+        }
       },
       "response": []
     }
