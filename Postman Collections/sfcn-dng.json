@@ -271,7 +271,7 @@
           "response": []
         },
         {
-          "name": "Get list of Duo Protected Web Applications for devices Copy",
+          "name": "Search for Duo Protected Web Applications for devices",
           "event": [
             {
               "listen": "prerequest",
@@ -419,27 +419,27 @@
   ],
   "variable": [
     {
-      "id": "85e1732d-842c-42b3-bc84-47d847c9e748",
+      "id": "fe266e06-4343-433b-9e00-6dd5a9432dce",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "b397c492-3ceb-431c-97f1-5b1f2b118a46",
+      "id": "b2ba3f1c-b314-4f3c-8a4e-8f11c6d4d6aa",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "7b6c59f7-271c-4bbc-92c8-99381e8ccac1",
+      "id": "1fe56e00-ec5e-4806-8af6-de3601893d00",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "43677cfa-6171-416f-99f3-369b4f4a3147",
+      "id": "0dc1abbe-5f21-4968-bc25-e7d59bf4ed29",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "5e4bef23-848b-49e9-997a-85aec7b85d4b",
+      "id": "faa64a19-dfc8-4b53-a351-5638b6599c0e",
       "key": "modifiedDeviceUid",
       "value": ""
     }
