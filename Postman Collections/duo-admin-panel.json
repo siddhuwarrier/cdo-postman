@@ -82,26 +82,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": {
-          "raw": "{{aegisBaseUrl}}/duo/applications?q=deviceUid:f360ae10-fe7d-4c4d-88c4-d4df7b67dda6&agg=count",
-          "host": [
-            "{{aegisBaseUrl}}"
-          ],
-          "path": [
-            "duo",
-            "applications"
-          ],
-          "query": [
-            {
-              "key": "q",
-              "value": "deviceUid:f360ae10-fe7d-4c4d-88c4-d4df7b67dda6"
-            },
-            {
-              "key": "agg",
-              "value": "count"
-            }
-          ]
-        }
+        "url": "{{aegisBaseUrl}}/duo/applications"
       },
       "response": []
     }
