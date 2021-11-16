@@ -278,10 +278,10 @@
               "script": {
                 "id": "8cb5ac3e-c64c-4bde-81c7-8c5dc24f8e9b",
                 "exec": [
-                  "const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
-                  "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
-                  "console.log(`Query params: ${queryParam}`);",
-                  "pm.request.url.query.add(`q=${queryParam}`);"
+                  "// const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
+                  "// const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
+                  "// console.log(`Query params: ${queryParam}`);",
+                  "// pm.request.url.query.add(`q=${queryParam}`);"
                 ],
                 "type": "text/javascript"
               }
@@ -320,7 +320,22 @@
                 "type": "text"
               }
             ],
-            "url": "{{aegisBaseUrl}}/dng/webapplications"
+            "url": {
+              "raw": "{{aegisBaseUrl}}/dng/webapplications?q=name:\"*burak*\"",
+              "host": [
+                "{{aegisBaseUrl}}"
+              ],
+              "path": [
+                "dng",
+                "webapplications"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "name:\"*burak*\""
+                }
+              ]
+            }
           },
           "response": []
         },
@@ -419,27 +434,27 @@
   ],
   "variable": [
     {
-      "id": "fe266e06-4343-433b-9e00-6dd5a9432dce",
+      "id": "e0fe43a5-57e1-48e9-9bf6-b7fe1e459904",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "b2ba3f1c-b314-4f3c-8a4e-8f11c6d4d6aa",
+      "id": "0be66de2-a427-41b6-8fe9-31ce38b27f39",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "1fe56e00-ec5e-4806-8af6-de3601893d00",
+      "id": "f864c0aa-5e81-4e76-bb60-d513ec3c597d",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "0dc1abbe-5f21-4968-bc25-e7d59bf4ed29",
+      "id": "e00a16fe-1864-4f0b-9624-8f8b9931b8bd",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "faa64a19-dfc8-4b53-a351-5638b6599c0e",
+      "id": "e497a1a6-5bda-4966-897f-469379a7d328",
       "key": "modifiedDeviceUid",
       "value": ""
     }
