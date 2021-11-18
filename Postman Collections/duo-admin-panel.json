@@ -85,6 +85,19 @@
         "url": "{{aegisBaseUrl}}/duo/applications"
       },
       "response": []
+    },
+    {
+      "name": "Trigger OOB Detection for Southbound Device",
+      "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ],
   "auth": {
