@@ -330,6 +330,19 @@
             "url": "{{aegisBaseUrl}}/targets/devices/{{modifiedDeviceUid}}"
           },
           "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
         }
       ],
       "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
@@ -365,27 +378,27 @@
   ],
   "variable": [
     {
-      "id": "c54a7773-bf55-4d03-b1a9-ff18b73bca60",
+      "id": "88422cb4-e662-4c0d-b143-b578281508fa",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "cd1d0ab3-2c93-436b-9072-33be05f1315a",
+      "id": "22daab15-d407-4b62-8702-2c6c251b7029",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "3c14c84f-c330-47bc-9001-f1e3c3eff1fd",
+      "id": "58a0c520-7fed-4f29-ad03-4600bdfa4e0f",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "24d162d2-55ae-49f7-84dd-c73eba6686aa",
+      "id": "532ea1f7-76c9-4202-83ec-7af86d5b00e4",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "6083837f-555b-4a0c-a260-64aae9473b1c",
+      "id": "9a067d9a-d08b-4a4e-833b-990597af4b21",
       "key": "modifiedDeviceUid",
       "value": ""
     }
