@@ -127,5 +127,12 @@
         ]
       }
     }
+  ],
+  "variable": [
+    {
+      "id": "7deaf806-aab4-4ef3-ba7f-becb03cf3f54",
+      "key": "firstDeviceUid",
+      "value": ""
+    }
   ]
 }
