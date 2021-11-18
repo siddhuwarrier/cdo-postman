@@ -66,7 +66,7 @@
           "script": {
             "id": "37cc4d9a-8f83-4d5a-88bd-213a67cd8c27",
             "exec": [
-              "const deviceUids = pm.environment.get(\"deviceUids\") || [];",
+              "const deviceUids = pm.collectionVariables.get(\"deviceUids\") || [];",
               "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
               "console.log(`Query params: ${queryParam}`);",
               "pm.request.url.query.add(`q=${queryParam}`);"
@@ -130,7 +130,7 @@
   ],
   "variable": [
     {
-      "id": "c2bed2c0-ddb3-4f8d-8363-42075a9c6cef",
+      "id": "d983d6e6-493e-49e7-a580-3350c36696ae",
       "key": "firstDeviceUid",
       "value": ""
     }
