@@ -332,7 +332,7 @@
           "response": []
         },
         {
-          "name": "Create new Duo Web Application",
+          "name": "Create new DNG Web Application",
           "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -378,27 +378,27 @@
   ],
   "variable": [
     {
-      "id": "5a69496b-4b51-43cd-99d2-8b9bc302e590",
+      "id": "7b5eba29-3138-4cb7-ba15-48f0ba6f4a37",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "464da31a-3aa6-4432-a59c-c068902220a9",
+      "id": "238fa5b1-c0cb-4b27-8bb0-b88bf274f0d1",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "c4fa849e-3e3a-409c-ab37-a22e735cd6b3",
+      "id": "2d09a72b-3aa3-4aba-bef5-e1085b365098",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "fe641f40-1732-492e-8e7c-1abe47c7812b",
+      "id": "bf1d2614-f016-4d27-a209-64eaffd2c1d6",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "07122816-b740-4458-9895-b669f446c8a0",
+      "id": "cc63cd5d-433c-4092-98a9-fb4efef345c1",
       "key": "modifiedDeviceUid",
       "value": ""
     }
