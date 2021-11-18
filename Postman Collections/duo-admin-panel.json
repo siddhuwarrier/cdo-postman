@@ -130,8 +130,13 @@
   ],
   "variable": [
     {
-      "id": "d983d6e6-493e-49e7-a580-3350c36696ae",
+      "id": "ca79ed7a-7bbf-4393-8a4b-a02dc5dcfcf5",
       "key": "firstDeviceUid",
+      "value": ""
+    },
+    {
+      "id": "9d07281f-d433-435b-9098-9023ae87d464",
+      "key": "deviceUids",
       "value": ""
     }
   ]
