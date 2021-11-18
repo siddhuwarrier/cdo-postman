@@ -335,7 +335,7 @@
       "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
     },
     {
-      "name": "New Folder",
+      "name": "Create new Protected Web Application",
       "item": [],
       "id": "4e182d15-8248-4acc-8da7-b780584f2ef8"
     },
@@ -383,27 +383,27 @@
   ],
   "variable": [
     {
-      "id": "fda1e6b8-1a79-4b91-aeae-37cb94f2f5ae",
+      "id": "c1c17c27-d28c-4fd3-9595-3f577ed54b7d",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "791aa6d6-8d60-47d0-a96c-0ef47f421dad",
+      "id": "6837ac1a-be7e-4bc5-b2d5-f0bb994269d1",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "24b9f8c7-62c8-4d6e-b855-051dea3bf549",
+      "id": "446d5b3b-00d0-4371-aefe-55852bb1b712",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "21deb417-869e-4cb7-8bf1-ae6f3e39cefb",
+      "id": "3af51f5b-0827-4bdc-96bc-be2abf92a338",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "523b4538-ca89-40e1-9bad-e6b1478422e1",
+      "id": "04b3f3fc-8a86-4989-b56d-9d6c9660f1d1",
       "key": "modifiedDeviceUid",
       "value": ""
     }
