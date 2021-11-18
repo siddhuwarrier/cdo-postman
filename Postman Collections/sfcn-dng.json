@@ -410,7 +410,7 @@
       "name": "Delete Protected Web Application",
       "item": [
         {
-          "name": "Get list of Duo Protected Web Applications for devices Copy",
+          "name": "Delete Duo Protected Web Application",
           "event": [
             {
               "listen": "prerequest",
@@ -497,27 +497,27 @@
   ],
   "variable": [
     {
-      "id": "6e826399-b46d-445b-8eea-e733d0264e7a",
+      "id": "6d4a23e0-fe75-4223-b147-973186e23095",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "13fd27b0-baef-4a67-9c96-8e288b052905",
+      "id": "0e514aaf-5c42-43d7-8f0b-b83dda63ffbd",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "b0887d0e-3ff5-4b9f-8267-2a2fee8dbc78",
+      "id": "67f93cd2-bc96-44d8-ac30-4dcf707451f5",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "4a66d2cd-7459-4b34-9b47-dbbd2f2842d9",
+      "id": "9d5a714a-0e46-4538-9412-00d93e5559c0",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "4057424f-4a66-4618-94c3-733879e6c6ea",
+      "id": "0125692e-f3e6-4065-a186-5d8908a9cc11",
       "key": "modifiedDeviceUid",
       "value": ""
     }
