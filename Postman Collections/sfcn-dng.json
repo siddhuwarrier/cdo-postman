@@ -417,10 +417,7 @@
               "script": {
                 "id": "b323b300-4c2c-4d49-a445-576f79ebe3c0",
                 "exec": [
-                  "const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
-                  "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
-                  "console.log(`Query params: ${queryParam}`);",
-                  "pm.request.url.query.add(`q=${queryParam}`);"
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -430,17 +427,7 @@
               "script": {
                 "id": "6dfb5962-165f-419f-808d-681e57f24c37",
                 "exec": [
-                  "const webApplications = pm.response.json();",
-                  "const firstWebApp = _.first(webApplications);",
-                  "if (firstWebApp !== undefined) {",
-                  "    const firstWebAppUid = _.get(firstWebApp, 'uid');",
-                  "    const firstDeviceUid = _.get(firstWebApp, 'deviceUid');",
-                  "    console.log(`first webapp UID: ${firstWebAppUid}`);",
-                  "    pm.collectionVariables.set(\"webAppUid\", firstWebAppUid);",
-                  "    pm.collectionVariables.set(\"modifiedDeviceUid\", firstDeviceUid);",
-                  "} else {",
-                  "    throw new Error(\"This set of queries does not work if there are no web applications\");",
-                  "}"
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -451,7 +438,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "DELETE",
             "header": [
               {
                 "key": "Content-Type",
@@ -459,7 +446,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{aegisBaseUrl}}/dng/webapplications"
+            "url": "{{aegisBaseUrl}}/dng/webapplications/4c8fad72-bff6-4d19-a945-079619d0b5a2"
           },
           "response": []
         }
@@ -497,27 +484,27 @@
   ],
   "variable": [
     {
-      "id": "6d4a23e0-fe75-4223-b147-973186e23095",
+      "id": "170d67b9-6a3f-4d89-b3b2-56aa26fe512c",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "0e514aaf-5c42-43d7-8f0b-b83dda63ffbd",
+      "id": "a89c8155-1a86-4fab-8716-f0b69753956b",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "67f93cd2-bc96-44d8-ac30-4dcf707451f5",
+      "id": "1fd40979-2396-4cd9-a751-30d1997b1029",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "9d5a714a-0e46-4538-9412-00d93e5559c0",
+      "id": "bc34aa6a-bfdc-4e48-be22-5815b29e285c",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "0125692e-f3e6-4065-a186-5d8908a9cc11",
+      "id": "1e191cfa-5d82-44dc-b0f9-0665a89e2a39",
       "key": "modifiedDeviceUid",
       "value": ""
     }
