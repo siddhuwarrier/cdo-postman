@@ -18,7 +18,7 @@
               "devices.forEach((device) => {",
               "    deviceUids.push(device.uid);",
               "});",
-              "pm.environment.set(\"deviceUids\", deviceUids);"
+              "pm.collectionVariables.set(\"deviceUids\", deviceUids);"
             ],
             "type": "text/javascript"
           }
@@ -130,7 +130,7 @@
   ],
   "variable": [
     {
-      "id": "7deaf806-aab4-4ef3-ba7f-becb03cf3f54",
+      "id": "c2bed2c0-ddb3-4f8d-8363-42075a9c6cef",
       "key": "firstDeviceUid",
       "value": ""
     }
