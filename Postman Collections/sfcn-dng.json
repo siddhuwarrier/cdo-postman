@@ -330,6 +330,60 @@
             "url": "{{aegisBaseUrl}}/targets/devices/{{modifiedDeviceUid}}"
           },
           "response": []
+        },
+        {
+          "name": "Get list of Duo Protected Web Applications for devices Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "b323b300-4c2c-4d49-a445-576f79ebe3c0",
+                "exec": [
+                  "const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
+                  "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
+                  "console.log(`Query params: ${queryParam}`);",
+                  "pm.request.url.query.add(`q=${queryParam}`);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "6dfb5962-165f-419f-808d-681e57f24c37",
+                "exec": [
+                  "const webApplications = pm.response.json();",
+                  "const firstWebApp = _.first(webApplications);",
+                  "if (firstWebApp !== undefined) {",
+                  "    const firstWebAppUid = _.get(firstWebApp, 'uid');",
+                  "    const firstDeviceUid = _.get(firstWebApp, 'deviceUid');",
+                  "    console.log(`first webapp UID: ${firstWebAppUid}`);",
+                  "    pm.collectionVariables.set(\"webAppUid\", firstWebAppUid);",
+                  "    pm.collectionVariables.set(\"modifiedDeviceUid\", firstDeviceUid);",
+                  "} else {",
+                  "    throw new Error(\"This set of queries does not work if there are no web applications\");",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "4cd339f0-fc49-4bae-a6ca-d2bc00e2851e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": "{{aegisBaseUrl}}/dng/webapplications"
+          },
+          "response": []
         }
       ],
       "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
@@ -442,27 +496,27 @@
   ],
   "variable": [
     {
-      "id": "2b078bd5-a1d6-40e1-a1df-bc12f0530ba3",
+      "id": "f5c05c85-5173-45bd-9bfa-c9414ad825a1",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "fed42faa-e4ef-4da2-9b59-696bed28ebd0",
+      "id": "04fda136-1568-4907-a969-9c6c05438ac9",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "11fd5d28-5a06-4772-9359-e405edda19ed",
+      "id": "6a1afd2f-c00f-4ec2-a9ff-51bb7d441554",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "2bf0f273-fc21-402e-a64b-d786c6040edf",
+      "id": "c14d1799-128f-4b3c-95c9-95010d98baaf",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "29cc509d-718a-4149-8e7c-551fd4cb5692",
+      "id": "9e74ca61-5523-4ebe-b854-24e79e34faf5",
       "key": "modifiedDeviceUid",
       "value": ""
     }
