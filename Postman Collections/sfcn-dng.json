@@ -400,6 +400,7 @@
                 "id": "10c16569-7b68-4625-92bd-ea0af73158fd",
                 "exec": [
                   "const deviceUid = pm.collectionVariables.get('sfcnDngDeviceUid');",
+                  "console.log('Device UID: ', deviceUid);",
                   "const applicationUid = \"5495701b-17bc-4a43-a523-9949bdee70f5\"; // change this if you want to",
                   "const body = {",
                   " deviceUid: deviceUid,",
@@ -417,7 +418,10 @@
                   "     sslCert: \"-----BEGIN CERTIFICATE-----\\n    MIIFIjCCBAqgAwIBAgISA2REdyLxMRisUf8QYGl0lpSYMA0GCSqGSIb3DQEBCwUA\\n    MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\\n    EwJSMzAeFw0yMTA5MTMwNjEyMTJaFw0yMTEyMTIwNjEyMTFaMBkxFzAVBgNVBAMM\\n    Diouc2Zjbi1kbmcuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\\n    tHyJHahIps80hC3tCwb+nRnJTbZDwh2eWtb6UiFAxbxmGo2B05NwtSgAvLDseac6\\n    8L8rvPfvi5S94Oxo1320WFSz3BRqdFqYdCaI5uLDuv/Cigcka6s0Jml8+L1ec6by\\n    jl31DxmN+U/iqJP2zISkux6BSEqtj3/VjV+Y6qx+X47P3soyhML/0Dx7HJOCvlLS\\n    DsuAq1iIMEoo53DY+5jJp0VUe+3PZ79tpF+T7w0+CtXxBKNKByTtgOpiD0XyXXlp\\n    HX7B9NJnlHT754FT5PTzPbkx599lh5VKbsCXpMQFpG1IQDdAMkgMkRCAnA93dftu\\n    oq7nF8WolNG+dJKdVPIwHwIDAQABo4ICSTCCAkUwDgYDVR0PAQH/BAQDAgWgMB0G\\n    A1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1Ud\\n    DgQWBBR6j7Jjy1R/0dWweNcd27iTBtfRqjAfBgNVHSMEGDAWgBQULrMXt1hWy65Q\\n    CUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9y\\n    My5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iub3Jn\\n    LzAZBgNVHREEEjAQgg4qLnNmY24tZG5nLmNvbTBMBgNVHSAERTBDMAgGBmeBDAEC\\n    ATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNl\\n    bmNyeXB0Lm9yZzCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB1AJQgvB6O1Y1siHMf\\n    gosiLA3R2k1ebE+UPWHbTi9YTaLCAAABe93/yJsAAAQDAEYwRAIgWhxqx0LLFJn2\\n    dno+Q4rh5CIqnPK2YpKSWWTSHDh+KbkCIGhvdZLutv0oIYkogoQdxpI2vhkpzFzy\\n    PELrlFMgwssqAHcAfT7y+I//iFVoJMLAyp5SiXkrxQ54CX8uapdomX4i8NcAAAF7\\n    3f/I1wAABAMASDBGAiEA0YWjzm0wQKmhp/kb9+BtDl/1UZJq3gztqfFwe9bXUAcC\\n    IQCR2mLQz16/pU49dqwvrNiYZHOl6lfHRF0/ehktKJNuVzANBgkqhkiG9w0BAQsF\\n    AAOCAQEAY72StoGyIObGpRMeMzpEcRdXWnVqhCY4gIj9EHjHG14kgHHnk3sZdqGq\\n    knPkuyJWK8AAdzMxXq6voJZijOsvtMsOt1AKCBilGjav5efwx25DF9eJrVqm73mP\\n    mqNDr8VA28HteNeKNH+B40y2GbPf2C98Pr8g6D4xoF38N9J3l7hTSjnjIUPSFdwm\\n    AQg4t9ZhNsusUMDwPp1wsEhis+vaYfHJcQHmX7PT8ha14g4mUGErRJv4HlmolUHu\\n    C+1Xru4AyuC03Uo8Qg+COya/4zZGm75KRJVaGk6T06kFcqvqNEQYm+R6MEID3ndz\\n    9vjUsrExNQSct4fLSfTTbr0iNX9Nfg==\\n    -----END CERTIFICATE-----\\n    -----BEGIN CERTIFICATE-----\\n    MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw\\n    TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\n    cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw\\n    WhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg\\n    RW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\\n    AoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP\\n    R5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx\\n    sxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm\\n    NHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg\\n    Z3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG\\n    /kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC\\n    AYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB\\n    Af8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA\\n    FHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw\\n    AoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw\\n    Oi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB\\n    gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\\n    PTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl\\n    ikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz\\n    CkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm\\n    lJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4\\n    avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2\\n    yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O\\n    yK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids\\n    hCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+\\n    HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv\\n    MldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX\\n    nLRbwHOoq7hHwg==\\n    -----END CERTIFICATE-----\\n    -----BEGIN CERTIFICATE-----\\n    MIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/\\n    MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\\n    DkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow\\n    TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\n    cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB\\n    AQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC\\n    ov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL\\n    wYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D\\n    LtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK\\n    4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5\\n    bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y\\n    sR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ\\n    Xmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4\\n    FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc\\n    SLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql\\n    PRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND\\n    TwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw\\n    SwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1\\n    c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx\\n    +tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB\\n    ATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu\\n    b3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E\\n    U1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu\\n    MA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC\\n    5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW\\n    9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG\\n    WCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O\\n    he8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC\\n    Dfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\\n    -----END CERTIFICATE-----\\n\",",
                   "",
                   " }",
-                  "}"
+                  "};",
+                  "",
+                  "console.log(\"Create Web App Body: \", body);",
+                  "pm.collectionVariables.set('reqBody', JSON.stringify(body));"
                 ],
                 "type": "text/javascript"
               }
@@ -428,9 +432,9 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
-            "url": null
+            "url": "{{aegisBaseUrl}}/dng/webapplications"
           },
           "response": []
         }
@@ -515,32 +519,32 @@
   ],
   "variable": [
     {
-      "id": "c526fd5a-f945-45f6-8ba3-7482606c5622",
+      "id": "a286e004-0e71-4408-a92f-0caaeb27b00f",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "ca2ec4cc-1cc5-4de3-a107-0d4bbf2fd20e",
+      "id": "a7e47eaa-4598-4703-a74d-e6934c2a75da",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "3cd8b53c-4306-4f25-85cc-7eb30beb50df",
+      "id": "f7d04e84-e845-4a5f-824b-a0393b5f973d",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "66d0686b-2a32-44ba-a653-4c1641b22fa8",
+      "id": "fd504c64-7e2d-42ba-9d95-9708f3acfb5a",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "4946dee7-ed24-4dfa-8185-18f17bfa2331",
+      "id": "35462d76-8c4f-4f3f-be1f-4795d63cdbde",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "e61e62de-5bad-4f67-ab06-53ff5c33861a",
+      "id": "867df55f-4fde-424a-ad7f-0da549fcbfe0",
       "key": "reqBody",
       "value": ""
     }
