@@ -335,6 +335,11 @@
       "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
     },
     {
+      "name": "New Folder",
+      "item": [],
+      "id": "4e182d15-8248-4acc-8da7-b780584f2ef8"
+    },
+    {
       "name": "Create new DNG Web Application",
       "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
       "protocolProfileBehavior": {
@@ -378,27 +383,27 @@
   ],
   "variable": [
     {
-      "id": "bfcba921-7b80-4492-bfff-1bfaaf49e17c",
+      "id": "4a7a65fb-56e2-4e6e-9519-eb0c622c38ac",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "786f82c5-8076-49c7-b95b-c96cf82b7018",
+      "id": "341a9d32-5237-4fad-80f4-adf096fd664e",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "0d1b2ca5-1308-448e-b9ca-84be93510254",
+      "id": "ecaa8698-968b-4610-a5ae-1ebf021d51cf",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "70adf2ff-6e1f-4686-be3f-095c4c0ba184",
+      "id": "7ed5b186-492b-4fa4-8fe1-026d97563f2d",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "bd44b852-b92f-4269-afd6-4862353287d8",
+      "id": "4864c232-4ed4-4342-9bc6-29a8dc0ad6b0",
       "key": "modifiedDeviceUid",
       "value": ""
     }
