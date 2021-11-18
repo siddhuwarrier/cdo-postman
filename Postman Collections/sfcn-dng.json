@@ -338,7 +338,7 @@
       "name": "Create new Protected Web Application",
       "item": [
         {
-          "name": "List SFCN-DNG devices Copy",
+          "name": "List SFCN-DNG devices",
           "event": [
             {
               "listen": "test",
@@ -437,27 +437,27 @@
   ],
   "variable": [
     {
-      "id": "fb52dc9d-33dd-484c-964e-39d94601c89a",
+      "id": "12533690-d0ef-47ff-b726-90d2e50ea98d",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "5b867413-d7f4-42db-8449-2ebfd078e350",
+      "id": "53636b32-2961-4edd-8ec4-ed71a954b19e",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "05194fcb-6fb2-4d2c-aa4e-be6c82898820",
+      "id": "7771f5b3-8e7b-41e1-a490-ed433fb5180a",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "dcc53e54-7209-43fb-9c27-8fb7c4eb9bfa",
+      "id": "82aa493a-3d11-4f97-8752-b2367123c02f",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "48e7a9cc-f214-476e-bcc0-6110151bfe01",
+      "id": "a4fcaadc-89ef-4c2c-b294-f1b6bbd2efae",
       "key": "modifiedDeviceUid",
       "value": ""
     }
