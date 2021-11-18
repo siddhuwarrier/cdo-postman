@@ -277,7 +277,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "PUT",
+            "method": "GET",
             "header": [
               {
                 "key": "Content-Type",
@@ -289,7 +289,7 @@
               "mode": "raw",
               "raw": "{\n    \"name\": \"burak crush pineapple\"\n}"
             },
-            "url": "{{aegisBaseUrl}}/dng/webapplications/{{webAppUid}}"
+            "url": "{{aegisBaseUrl}}/dng/webapplications/c4d0db78-8db7-4c50-b745-52f1127f8ae1"
           },
           "response": []
         },
@@ -530,37 +530,37 @@
   ],
   "variable": [
     {
-      "id": "c43df0f3-9cdb-4038-9c0d-f73114de7fa6",
+      "id": "b02dae9a-dff4-48ef-b64a-d34e82d949f3",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "41c76cf0-ed1c-4cae-b21f-39fb0ad2eb09",
+      "id": "9ce15c0b-1392-4247-be60-d38dff85ab0f",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "1012c870-c516-401e-9fb2-c0421fb416e2",
+      "id": "7892e7a5-241a-431e-802f-4ae2ab3d0248",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "cc8d12d5-771d-4629-88c7-c8d8b6d8dd6b",
+      "id": "b3aec48d-29b6-46ff-876f-5657fc724cae",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "c8f8d89a-c384-431f-85d6-8dcafe4a390d",
+      "id": "c2b36db6-af12-46a7-a95a-92a52509fd40",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "c4921772-d21d-43ca-8911-08fd268cb987",
+      "id": "b415cfdc-00fe-4818-8161-3920b5c8cb76",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "a1eacd03-f171-4273-862b-51f0e9c22599",
+      "id": "4f9d44a7-47ca-42b8-849f-e4424eac6e16",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
