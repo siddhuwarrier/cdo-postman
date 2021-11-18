@@ -407,7 +407,7 @@
       "id": "4e182d15-8248-4acc-8da7-b780584f2ef8"
     },
     {
-      "name": "New Folder",
+      "name": "Delete Protected Web Application",
       "item": [],
       "id": "a4a32a0c-ade0-458e-a2dd-46d4787ec903"
     }
@@ -442,27 +442,27 @@
   ],
   "variable": [
     {
-      "id": "28003bfd-a058-4ffd-966d-b7315e69e720",
+      "id": "2b078bd5-a1d6-40e1-a1df-bc12f0530ba3",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "e09fa2f1-daa0-4d76-8535-1c7178146e1b",
+      "id": "fed42faa-e4ef-4da2-9b59-696bed28ebd0",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "8f6db400-e35f-4b0c-a744-611c965aa3c6",
+      "id": "11fd5d28-5a06-4772-9359-e405edda19ed",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "ad6e5442-46f8-485f-9cfa-f3949ae769e0",
+      "id": "2bf0f273-fc21-402e-a64b-d786c6040edf",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "006b019f-531c-415b-9feb-1f2eda96b039",
+      "id": "29cc509d-718a-4149-8e7c-551fd4cb5692",
       "key": "modifiedDeviceUid",
       "value": ""
     }
