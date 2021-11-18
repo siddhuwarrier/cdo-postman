@@ -350,7 +350,8 @@
                   "devices.forEach((device) => {",
                   "    deviceUids.push(device.uid);",
                   "});",
-                  "pm.collectionVariables.set(\"sfcnDngDeviceUids\", deviceUids);"
+                  "pm.collectionVariables.set(\"sfcnDngDeviceUid\", _.first(deviceUids));",
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -392,6 +393,18 @@
         },
         {
           "name": "Create new DNG Web Application",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "10c16569-7b68-4625-92bd-ea0af73158fd",
+                "exec": [
+                  "const deviceUid = pm.collectionVariables.get('sfcnDngDeviceUid');"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -484,27 +497,27 @@
   ],
   "variable": [
     {
-      "id": "4d9c3672-4c94-46aa-8913-5aabb747a4e8",
+      "id": "4e389657-4679-4679-87e3-21a2bc083034",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "03c70bdb-f27d-40ef-abe9-28338ca3197c",
+      "id": "15c42553-6176-494d-bb67-2d202bda443f",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "9392abc6-2bd3-43de-87d8-6f0f0c1bef27",
+      "id": "4689174c-7793-4293-8043-36f42a72842b",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "27cc60f5-1173-44d7-a49b-d49ff90a2fff",
+      "id": "5f75c7c0-a2da-422e-8a96-d7f90c329025",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "d4cb8de6-bad5-4564-ba64-d9e7cbe49c5d",
+      "id": "54b67180-a0a0-45f3-bf7a-5fe4f80eeaaa",
       "key": "modifiedDeviceUid",
       "value": ""
     }
