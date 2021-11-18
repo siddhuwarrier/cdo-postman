@@ -378,27 +378,27 @@
   ],
   "variable": [
     {
-      "id": "88422cb4-e662-4c0d-b143-b578281508fa",
+      "id": "c2f1ac50-4e35-46db-8944-9b95ba41a6c7",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "22daab15-d407-4b62-8702-2c6c251b7029",
+      "id": "32207a63-0f0b-487d-9629-f70334d01deb",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "58a0c520-7fed-4f29-ad03-4600bdfa4e0f",
+      "id": "ca3a958a-a029-4188-b93c-5b07db782e62",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "532ea1f7-76c9-4202-83ec-7af86d5b00e4",
+      "id": "459da575-01d4-449e-b472-bff29a11fad8",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "9a067d9a-d08b-4a4e-833b-990597af4b21",
+      "id": "6af3e08e-766e-48ac-8fff-ebe8d70f3516",
       "key": "modifiedDeviceUid",
       "value": ""
     }
