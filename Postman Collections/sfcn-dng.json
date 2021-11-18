@@ -405,6 +405,11 @@
         }
       ],
       "id": "4e182d15-8248-4acc-8da7-b780584f2ef8"
+    },
+    {
+      "name": "New Folder",
+      "item": [],
+      "id": "a4a32a0c-ade0-458e-a2dd-46d4787ec903"
     }
   ],
   "auth": {
@@ -437,27 +442,27 @@
   ],
   "variable": [
     {
-      "id": "12533690-d0ef-47ff-b726-90d2e50ea98d",
+      "id": "e219f0ab-a96d-487e-b727-d6d0a680257b",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "53636b32-2961-4edd-8ec4-ed71a954b19e",
+      "id": "c14cfca1-199b-469d-8a12-f729517fa3b2",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "7771f5b3-8e7b-41e1-a490-ed433fb5180a",
+      "id": "03fc1d51-661e-4c7e-80fb-ace440dd5561",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "82aa493a-3d11-4f97-8752-b2367123c02f",
+      "id": "389a2096-ba55-4e5c-b942-f46299370384",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "a4fcaadc-89ef-4c2c-b294-f1b6bbd2efae",
+      "id": "bba9e61d-40bf-4f21-9b0b-a4b0544ac4cc",
       "key": "modifiedDeviceUid",
       "value": ""
     }
