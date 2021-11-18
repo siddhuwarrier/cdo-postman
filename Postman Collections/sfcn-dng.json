@@ -389,22 +389,22 @@
             "description": "Set the `devicesQuery` variable to execute a custom query"
           },
           "response": []
+        },
+        {
+          "name": "Create new DNG Web Application",
+          "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
         }
       ],
       "id": "4e182d15-8248-4acc-8da7-b780584f2ef8"
-    },
-    {
-      "name": "Create new DNG Web Application",
-      "id": "67ef964a-8706-490e-8e09-0ea0708c3a65",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": null
-      },
-      "response": []
     }
   ],
   "auth": {
@@ -437,27 +437,27 @@
   ],
   "variable": [
     {
-      "id": "f527205a-fb01-47e4-8e5a-f284a711bb8d",
+      "id": "72ae9122-5228-42cf-b7d8-33fe8554cdb9",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "e3e8036a-25c6-46a3-a4d6-594bef5c6589",
+      "id": "f6ae7560-a2f7-47f3-ab57-c495ef40c680",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "8b04e054-c72c-4a4c-bec8-b9dc8dfe24d2",
+      "id": "668c74b1-7a13-432a-af39-a577aefd8341",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "fbfb04e5-1e12-4d72-a202-58f2605d8515",
+      "id": "91651657-2003-443c-8225-5dc22a6d10df",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "805d42ef-4afb-4068-a608-cf618cfd2b3d",
+      "id": "528e409d-5a4b-4bca-8da9-492fc68a483b",
       "key": "modifiedDeviceUid",
       "value": ""
     }
