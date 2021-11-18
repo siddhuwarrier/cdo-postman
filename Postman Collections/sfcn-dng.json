@@ -410,7 +410,7 @@
       "name": "Delete Protected Web Application",
       "item": [
         {
-          "name": "Delete Duo Protected Web Application",
+          "name": "Delete Protected Web Application",
           "event": [
             {
               "listen": "prerequest",
@@ -484,27 +484,27 @@
   ],
   "variable": [
     {
-      "id": "170d67b9-6a3f-4d89-b3b2-56aa26fe512c",
+      "id": "819d3a48-c110-4295-b202-7e1459402797",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "a89c8155-1a86-4fab-8716-f0b69753956b",
+      "id": "06b41fab-c7b0-4608-9fe5-f53ec61c731c",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "1fd40979-2396-4cd9-a751-30d1997b1029",
+      "id": "da0653fd-298f-4e24-801a-401c50705a3d",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "bc34aa6a-bfdc-4e48-be22-5815b29e285c",
+      "id": "251e46f2-cf72-44c6-81e3-5b4048b5d1cf",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "1e191cfa-5d82-44dc-b0f9-0665a89e2a39",
+      "id": "f1b3ba2a-8860-4355-8a17-a0f22df97e3b",
       "key": "modifiedDeviceUid",
       "value": ""
     }
