@@ -217,59 +217,6 @@
           "response": []
         },
         {
-          "name": "List SFCN-DNG devices Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "a469c331-83a2-4a8e-bbde-0fb4635e2368",
-                "exec": [
-                  "const devices = pm.response.json();",
-                  "const deviceUids = [];",
-                  "devices.forEach((device) => {",
-                  "    deviceUids.push(device.uid);",
-                  "});",
-                  "pm.collectionVariables.set(\"sfcnDngDeviceUids\", deviceUids);"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "a3dce9d2-f0e7-417f-a2b3-21b02155db41",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:SFCN_DNG",
-              "host": [
-                "{{aegisBaseUrl}}"
-              ],
-              "path": [
-                "targets",
-                "devices"
-              ],
-              "query": [
-                {
-                  "key": "q",
-                  "value": "deviceType:SFCN_DNG",
-                  "description": "Query Parameter"
-                }
-              ]
-            },
-            "description": "Set the `devicesQuery` variable to execute a custom query"
-          },
-          "response": []
-        },
-        {
           "name": "Get list of Duo Protected Web Applications for devices",
           "event": [
             {
@@ -583,37 +530,37 @@
   ],
   "variable": [
     {
-      "id": "ce0835f6-e732-47a5-a9b3-b6b05f452fbc",
+      "id": "ce6e3112-e9e8-4922-89b2-1ba018f742ef",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "3fee9c8d-7a34-41c1-aded-e41aa30cc07c",
+      "id": "79e857fc-0b7a-4076-ba72-a69fb790bad6",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "b60ef35d-c0da-4751-84a4-b57ab5a8e86f",
+      "id": "536fd74f-cc95-4c45-a078-f6ba4da7c542",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "9e14539b-14c7-43fb-b0ae-4771113f3fc1",
+      "id": "6ffa3a23-852e-4b83-8fe9-83f6f1fb327f",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "a2a0a1fb-5399-4043-96a1-b390d1d97583",
+      "id": "c9c70961-e9ef-4d06-995f-4e32854fdcef",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "3fbe163b-b726-4c7b-a4e3-09f143c27be3",
+      "id": "881b353d-cca6-4feb-b0ff-2a680d765ec9",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "f6ca45ea-ad8d-48a6-bd79-271cb9a43286",
+      "id": "841e5f75-dc62-4cdb-ad04-7cb3424b3bec",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
