@@ -217,7 +217,7 @@
           "response": []
         },
         {
-          "name": "Get list of Duo Protected Web Applications for devices",
+          "name": "Get list of Duo Protected Web Applications",
           "event": [
             {
               "listen": "prerequest",
@@ -530,37 +530,37 @@
   ],
   "variable": [
     {
-      "id": "15379961-2693-4796-8588-a3b55d19e4b9",
+      "id": "0df02a46-80ea-43f2-bd25-e788526a2b74",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "ebd286ed-31ea-4a16-ab95-9bd5fde489d4",
+      "id": "a800a40d-5a42-4be7-84d4-42744ecd3fb4",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "c281ec8a-d8dd-4b0b-86da-89fbf428c5b0",
+      "id": "274dc581-6daa-401f-9a36-a56cfae7a747",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "c48e1503-ff93-42b9-bb57-9164996a50f2",
+      "id": "31cffafa-83ca-4d2b-9284-076b2d24a5cc",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "7f44cc37-3bd1-4ade-a896-f6aa74e3767e",
+      "id": "5bcb22b4-1899-40cc-84c3-86359656690b",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "4c00047d-a2ed-404f-811a-2b1ec859eb5d",
+      "id": "26e59b2a-bc6c-49b2-b7af-eaaae966a8ef",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "a74bf0b8-e629-4fa9-841d-92659baf6149",
+      "id": "dd095690-1316-4b79-9ee0-741f9859b0f8",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
