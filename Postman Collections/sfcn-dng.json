@@ -271,60 +271,6 @@
           "response": []
         },
         {
-          "name": "Get list of Duo Protected Web Applications for devices Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "a2118bb2-cefb-4479-82d4-b6ea0be513f9",
-                "exec": [
-                  "const deviceUids = pm.collectionVariables.get(\"sfcnDngDeviceUids\");",
-                  "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
-                  "console.log(`Query params: ${queryParam}`);",
-                  "pm.request.url.query.add(`q=${queryParam}`);"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "26e932fd-992d-4725-8ab5-54fde43f64ca",
-                "exec": [
-                  "const webApplications = pm.response.json();",
-                  "const firstWebApp = _.first(webApplications);",
-                  "if (firstWebApp !== undefined) {",
-                  "    const firstWebAppUid = _.get(firstWebApp, 'uid');",
-                  "    const firstDeviceUid = _.get(firstWebApp, 'deviceUid');",
-                  "    console.log(`first webapp UID: ${firstWebAppUid}`);",
-                  "    pm.collectionVariables.set(\"webAppUid\", firstWebAppUid);",
-                  "    pm.collectionVariables.set(\"modifiedDeviceUid\", firstDeviceUid);",
-                  "} else {",
-                  "    throw new Error(\"This set of queries does not work if there are no web applications\");",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "454e60a0-9a45-4d5d-8268-74d5291e5523",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "url": "{{aegisBaseUrl}}/dng/webapplications/"
-          },
-          "response": []
-        },
-        {
           "name": "Update Duo Protected Web Applications",
           "id": "98c3b04b-fb70-4dd3-965b-b9bd4b1fa55c",
           "protocolProfileBehavior": {
@@ -584,37 +530,37 @@
   ],
   "variable": [
     {
-      "id": "002179e3-393b-4095-9a49-b98cb107bfb7",
+      "id": "62e1be85-5f79-4a0a-a0cc-81b6819b5c48",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "98c52273-3d5f-4ca1-99d5-928d8ca86dea",
+      "id": "3e74478a-7549-4782-96da-ff5da434b5cb",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "bebd49b2-d4a6-4ee7-90b8-81baac935bfd",
+      "id": "21fa17d4-7cd1-4649-a836-aa225af3c12a",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "0e9d1dbc-7489-4128-9f97-94ba4182fa44",
+      "id": "71c0ce04-cc7a-4b89-ad87-bba1555dbaf5",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "bfd6e914-27a7-4595-a5d5-23ee2685445d",
+      "id": "20215eac-62e5-4dd0-82d5-1ac7ad30c257",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "a166480d-bc5e-4406-819b-8bd398e0ebd7",
+      "id": "84fdea8c-c0e6-46fd-aa0b-13a286efc4e3",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "ce86cc71-d638-4949-9d1b-00fde211e4d8",
+      "id": "4d68fa08-b27e-41af-ab5f-6282286f01f0",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
