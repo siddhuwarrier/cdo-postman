@@ -330,6 +330,59 @@
             "url": "{{aegisBaseUrl}}/targets/devices/{{modifiedDeviceUid}}"
           },
           "response": []
+        },
+        {
+          "name": "List SFCN-DNG devices Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "a469c331-83a2-4a8e-bbde-0fb4635e2368",
+                "exec": [
+                  "const devices = pm.response.json();",
+                  "const deviceUids = [];",
+                  "devices.forEach((device) => {",
+                  "    deviceUids.push(device.uid);",
+                  "});",
+                  "pm.collectionVariables.set(\"sfcnDngDeviceUids\", deviceUids);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "a3dce9d2-f0e7-417f-a2b3-21b02155db41",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:SFCN_DNG",
+              "host": [
+                "{{aegisBaseUrl}}"
+              ],
+              "path": [
+                "targets",
+                "devices"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "deviceType:SFCN_DNG",
+                  "description": "Query Parameter"
+                }
+              ]
+            },
+            "description": "Set the `devicesQuery` variable to execute a custom query"
+          },
+          "response": []
         }
       ],
       "id": "573a0ace-c294-4d00-b926-f352e8a0845c"
@@ -530,37 +583,37 @@
   ],
   "variable": [
     {
-      "id": "76987271-dbe9-49f4-bce9-bd6522168cf8",
+      "id": "bde00112-eb31-4cd7-b57b-f9b0270aaeec",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "c61e3c4f-e779-4ea4-9a32-be345fb3fad6",
+      "id": "c4758dba-e9db-44a6-834e-88d27821fe00",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "63facb32-9070-4bb8-bbd0-697855d3c072",
+      "id": "433a7179-a5d1-41c6-a368-4ef62de13b3a",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "96c8d106-fbf9-4b25-83b3-7ead6107c13b",
+      "id": "99d6bc0d-b05b-48c2-acbe-9b7a7d65dd4b",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "939166d3-d654-4224-a2c3-15cf5fc51b1f",
+      "id": "d169145b-98f7-44cc-a2ed-0edde4bb156f",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "b94dcf1a-9f87-4ab6-8a06-8f15f0305161",
+      "id": "5fdf2afd-6ec9-4185-bdf3-bb140f7dd755",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "dc734569-07c1-45e2-9d2d-fdca4e7648d8",
+      "id": "87d5af3c-896d-4f14-9c42-e044b3e5164c",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
