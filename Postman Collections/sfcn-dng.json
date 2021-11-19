@@ -271,29 +271,6 @@
           "response": []
         },
         {
-          "name": "Update Duo Protected Web Applications",
-          "id": "98c3b04b-fb70-4dd3-965b-b9bd4b1fa55c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"tags\": {},\n    \"tagKeys\": [],\n    \"tagValues\": [],\n    \"uid\": \"c4d0db78-8db7-4c50-b745-52f1127f8ae1\",\n    \"name\": \"JIRA - Duo Access Gateway\",\n    \"namespace\": \"dng\",\n    \"type\": \"webapplications\",\n    \"version\": 1,\n    \"createdDate\": 1637263531130,\n    \"lastUpdatedDate\": 1637263531151,\n    \"actionContext\": null,\n    \"state\": null,\n    \"triggerState\": null,\n    \"queueTriggerState\": null,\n    \"stateMachineContext\": null,\n    \"stateDate\": null,\n    \"status\": \"IDLE\",\n    \"stateMachineDetails\": null,\n    \"scheduledStateMachineEnabledMap\": {},\n    \"pendingStatesQueue\": [],\n    \"createdTenantUid\": null,\n    \"configurationUid\": \"b3552d77-df2e-4787-827f-aa5dc3b48d5e\",\n    \"sourceConfigurationUid\": null,\n    \"deviceUid\": \"9cadc2e6-c1b6-44b4-b3e3-db9ef1f4e3a1\",\n    \"duoAdminPanelApplicationUid\": \"1d0c3163-62de-4144-ac8e-cd4e493318ee\",\n    \"generation\": null,\n    \"resourceVersion\": null,\n    \"deviceResourceUid\": null,\n    \"internal\": {\n        \"hostname\": \"test.jira.com\",\n        \"port\": 80,\n        \"trustedCert\": null,\n        \"addXForwardedHost\": true,\n        \"clientMaxBodySize\": 128,\n        \"upstreamResponseTimeout\": 180,\n        \"useInternalNameForHostHeader\": true,\n        \"useInternalNameForSni\": true,\n        \"useSsl\": false\n    },\n    \"external\": {\n        \"hostname\": \"jira.com\",\n        \"sessionDuration\": \"920s\",\n        \"sslCert\": \"MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAwWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cPR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdxsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8ZutmNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxgZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaAFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcwAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRwOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQBgt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6WPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wlikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQzCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BImlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1OyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90IdshCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6ZvMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqXnLRbwHOoq7hHwg==\",\n        \"sslKey\": \"MIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1owTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XCov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpLwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+DLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5ysR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBcSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2qlPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TNDTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26ZtuMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuGWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9Ohe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFCDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\"\n    }\n}"
-            },
-            "url": "{{aegisBaseUrl}}/dng/webapplications/c4d0db78-8db7-4c50-b745-52f1127f8ae1"
-          },
-          "response": []
-        },
-        {
           "name": "Wait for device to be Not Synced",
           "event": [
             {
@@ -530,37 +507,37 @@
   ],
   "variable": [
     {
-      "id": "bc86dbed-a895-4e88-ba03-c2c1da54041d",
+      "id": "6b40c8f2-bcbc-44f0-a432-cf72a49144d2",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "c2458868-7577-4494-98de-235a8c84441e",
+      "id": "be17a5ae-461d-4a18-b300-9015f4732b4e",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "616e3eb7-5432-4b17-a732-d07840785b16",
+      "id": "3cb0eaf3-a9b2-41f5-a325-ad9c5be96b9e",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "5fb8d778-bb39-4441-a7aa-6860cf775baf",
+      "id": "5abe7d61-473e-4d38-9749-c8f7dca1e642",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "ec4fcee2-da69-49d8-be86-be584f27d515",
+      "id": "9c4c3d5f-669e-4129-a501-e3f83d1f3468",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "2040f122-a6b0-49da-aa8f-c1c57fd3e9f0",
+      "id": "01993f22-3895-4ca2-91ee-443faa839f82",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "b2be4a0f-9f23-4741-b767-549b6a3c819b",
+      "id": "8621aa07-a642-41e2-ae3c-6c2a297a10bc",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
