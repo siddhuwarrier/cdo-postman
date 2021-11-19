@@ -6,59 +6,6 @@
   },
   "item": [
     {
-      "name": "Find Duo Admin Panel Devices",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "afb4903d-2380-429b-be61-8007d47ae877",
-            "exec": [
-              "const devices = pm.response.json();",
-              "const deviceUids = [];",
-              "devices.forEach((device) => {",
-              "    deviceUids.push(device.uid);",
-              "});",
-              "pm.collectionVariables.set(\"deviceUids\", deviceUids);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "id": "9d2da1ef-e678-44f3-ab99-28e780149814",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "type": "text",
-            "value": "application/json"
-          }
-        ],
-        "url": {
-          "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:DUO_ADMIN_PANEL",
-          "host": [
-            "{{aegisBaseUrl}}"
-          ],
-          "path": [
-            "targets",
-            "devices"
-          ],
-          "query": [
-            {
-              "key": "q",
-              "value": "deviceType:DUO_ADMIN_PANEL",
-              "description": "Query Parameter"
-            }
-          ]
-        },
-        "description": "Set the `devicesQuery` variable to execute a custom query"
-      },
-      "response": []
-    },
-    {
       "name": "Get Duo Admin Panel Applications",
       "event": [
         {
@@ -130,12 +77,12 @@
   ],
   "variable": [
     {
-      "id": "ca79ed7a-7bbf-4393-8a4b-a02dc5dcfcf5",
+      "id": "a14a567f-fa21-487e-b684-03b7d2f34c1d",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "9d07281f-d433-435b-9098-9023ae87d464",
+      "id": "2130da31-82d0-4ed2-b6de-2f55ed8fb633",
       "key": "deviceUids",
       "value": ""
     }
