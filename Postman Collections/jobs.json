@@ -122,68 +122,6 @@
       "response": []
     },
     {
-      "name": "Trigger Job Copy",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "e6ec0ba5-54bf-4336-8501-5aee382838f9",
-            "exec": [
-              "const jobAction = pm.globals.get(\"jobAction\");",
-              "const jobTrigger = {",
-              "    \"action\": jobAction,",
-              "    \"queueTriggerState\": \"PENDING_ORCHESTRATION\",",
-              "    \"objRefs\": []",
-              "};",
-              "const deviceUids = pm.environment.get(\"deviceUids\") || [];",
-              "deviceUids.forEach(deviceUid => {",
-              "    jobTrigger.objRefs.push({",
-              "        \"uid\": deviceUid,",
-              "        \"namespace\": \"targets\",",
-              "        \"type\": \"devices\"",
-              "    });",
-              "});",
-              "console.log(\"Job Trigger Body: \", jobTrigger);",
-              "pm.collectionVariables.set('reqBody', JSON.stringify(jobTrigger));"
-            ],
-            "type": "text/javascript"
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "470953e9-8e21-4d94-aab8-8a8b85ae7eac",
-            "exec": [
-              "const job = pm.response.json();",
-              "console.log('created job UID: ', job.uid);",
-              "pm.environment.set(\"jobUid\", job.uid);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "id": "59e5e3f9-8616-4f99-ad5c-94d7a891af7a",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{{reqBody}}"
-        },
-        "url": "{{aegisBaseUrl}}/state-machines/jobs"
-      },
-      "response": []
-    },
-    {
       "name": "Wait for job to complete",
       "event": [
         {
@@ -255,7 +193,7 @@
   ],
   "variable": [
     {
-      "id": "0dea8110-7dd2-4cba-b969-dae458b3d148",
+      "id": "326bfe7c-11d4-4b35-9583-7a61b08ea184",
       "key": "reqBody",
       "value": "{\"action\":\"GET_ZTNA_EVENTS\",\"queueTriggerState\":\"PENDING_ORCHESTRATION\",\"objRefs\":[{\"uid\":\"7226bd8e-ca22-4c72-bef4-8bf10d6ef649\",\"namespace\":\"targets\",\"type\":\"devices\"}]}"
     }
