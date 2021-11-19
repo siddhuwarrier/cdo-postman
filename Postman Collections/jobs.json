@@ -161,6 +161,47 @@
         "description": "This request must be executed as part of the collection"
       },
       "response": []
+    },
+    {
+      "name": "Wait for job to complete Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "15979335-bc6b-40fd-890e-2dc76632b989",
+            "exec": [
+              "const job= pm.response.json();",
+              "const numTries = pm.environment.get('numTries') || 0;",
+              "const waitBetweenTries = 3000;",
+              "if (job.overallProgress !== 'DONE' && job.overallProgress !== 'ERROR' && numTries < 10) {",
+              "    pm.environment.set('numTries', numTries + 1);",
+              "    console.log('Job not completed. Trying again...');",
+              "    setTimeout(() => {}, waitBetweenTries);",
+              "    postman.setNextRequest(pm.info.requestId)",
+              "} else {",
+              "    console.log('Successfully waited for job to finish');",
+              "    pm.environment.unset('numTries');",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "3aa438b8-f12c-4493-828e-6d5912fdb547",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"blah\": \"dgdg\"\n}"
+        },
+        "url": "{{aegisBaseUrl}}/state-machines/jobs/{{jobUid}}",
+        "description": "This request must be executed as part of the collection"
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -193,7 +234,7 @@
   ],
   "variable": [
     {
-      "id": "2a8862cf-4b81-40e6-acd6-373f0f4ade47",
+      "id": "a914a70e-4653-4ab8-9043-ab95dbba63e2",
       "key": "reqBody",
       "value": "{\"action\":\"GET_ZTNA_EVENTS\",\"queueTriggerState\":\"PENDING_ORCHESTRATION\",\"objRefs\":[{\"uid\":\"7226bd8e-ca22-4c72-bef4-8bf10d6ef649\",\"namespace\":\"targets\",\"type\":\"devices\"}]}"
     }
