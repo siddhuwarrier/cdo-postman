@@ -6,7 +6,7 @@
   },
   "item": [
     {
-      "name": "Find Duo Admin Panel Devices in Tenant Copy",
+      "name": "Find Duo Admin Panel Devices in Tenant",
       "event": [
         {
           "listen": "test",
@@ -124,12 +124,12 @@
   ],
   "variable": [
     {
-      "id": "dee094e9-f25a-40e1-a8a1-9a4ba06ffe22",
+      "id": "6420e5ae-83ed-4fb9-a4a2-868f46299f1d",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "a0b5e432-304e-4a46-b107-c1b316cddd7d",
+      "id": "718bc807-7dbc-4179-bf6b-f690c2dd5af3",
       "key": "deviceUids",
       "value": ""
     }
