@@ -45,6 +45,19 @@
         "url": null
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "0af87052-e975-40b1-b8a3-46e5f8bce9b6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -77,12 +90,12 @@
   ],
   "variable": [
     {
-      "id": "aaa6e809-8e23-4ad3-a383-14397e1f6785",
+      "id": "9ad9dac1-5ac1-4ecb-adb1-c7b6b2692fc0",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "5f26f8fe-6423-4a5f-b6f0-94cad606cde8",
+      "id": "f2ce4282-1ed3-4438-9825-5e65da11b4a3",
       "key": "deviceUids",
       "value": ""
     }
