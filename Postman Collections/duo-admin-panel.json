@@ -6,6 +6,19 @@
   },
   "item": [
     {
+      "name": "New Request",
+      "id": "0af87052-e975-40b1-b8a3-46e5f8bce9b6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
+    },
+    {
       "name": "Get Duo Admin Panel Applications",
       "event": [
         {
@@ -36,19 +49,6 @@
     {
       "name": "Trigger MFA retrieval job",
       "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": null
-      },
-      "response": []
-    },
-    {
-      "name": "New Request",
-      "id": "0af87052-e975-40b1-b8a3-46e5f8bce9b6",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -90,12 +90,12 @@
   ],
   "variable": [
     {
-      "id": "d3ffbe65-2eb2-43a1-9487-3371fdfdd9f8",
+      "id": "0ee11200-2397-4b84-8dd1-6e0d4d33fb20",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "d8393d74-8ff8-4ee3-ad10-16da3da6a598",
+      "id": "d51e3ec9-c484-41fa-a87c-0feb347d34a2",
       "key": "deviceUids",
       "value": ""
     }
