@@ -45,6 +45,53 @@
         "url": null
       },
       "response": []
+    },
+    {
+      "name": "Find Duo Admin Panel Devices in Tenant Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f49c021a-b78a-4667-9efb-43df0d0df9ab",
+            "exec": [
+              "const devices = pm.response.json();",
+              "const deviceUids = devices.map((device) => device.uid);",
+              "pm.collectionVariables.set(\"duoAdminPanelDeviceUids\", deviceUids);",
+              "pm.test(devices.length === 1);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "5b5656ec-1271-44a5-a657-d17960f79829",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{aegisBaseUrl}}/targets/devices?q=deviceType:DUO_ADMIN_PANEL&resolve=%5Btargets/devices.%7Buid,name%7D%5D",
+          "host": [
+            "{{aegisBaseUrl}}"
+          ],
+          "path": [
+            "targets",
+            "devices"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "deviceType:DUO_ADMIN_PANEL"
+            },
+            {
+              "key": "resolve",
+              "value": "%5Btargets/devices.%7Buid,name%7D%5D"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -77,12 +124,12 @@
   ],
   "variable": [
     {
-      "id": "6aa02aa1-a104-4e0a-bab4-22b3859650ff",
+      "id": "dbc84885-e8c5-43b3-a426-3c3ce0e3876c",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "bb45f263-f261-4afe-8964-ceb43e760a06",
+      "id": "a7f9c57b-d30f-4100-bcb1-04ad85a25075",
       "key": "deviceUids",
       "value": ""
     }
