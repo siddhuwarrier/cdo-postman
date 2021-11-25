@@ -6,19 +6,6 @@
   },
   "item": [
     {
-      "name": "Get Duo Admin Panel Devices",
-      "id": "0af87052-e975-40b1-b8a3-46e5f8bce9b6",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": null
-      },
-      "response": []
-    },
-    {
       "name": "Get Duo Admin Panel Applications",
       "event": [
         {
@@ -90,12 +77,12 @@
   ],
   "variable": [
     {
-      "id": "837c9657-98b6-4b02-954e-ab92df2d3daf",
+      "id": "dee8fe15-6da0-43d1-98c2-e4f85a145857",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "514a3120-aae1-4412-815c-fec7e9972e64",
+      "id": "927645da-478b-4fd8-b7d0-6fee41a1c2a4",
       "key": "deviceUids",
       "value": ""
     }
