@@ -124,13 +124,18 @@
   ],
   "variable": [
     {
-      "id": "13a5f033-fdc0-4843-9a0c-05c22d4881cf",
+      "id": "d2b174b7-f84a-4c28-9f9b-7a672a926b29",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "aeb6abf3-a5a6-439b-b576-f8009b91952d",
+      "id": "2b8245c5-fd2b-4dd8-bf06-93afc133daec",
       "key": "deviceUids",
+      "value": ""
+    },
+    {
+      "id": "a041eeec-e511-4abe-b2c7-715d6670d0c2",
+      "key": "duoAdminPanelDeviceUids",
       "value": ""
     }
   ]
