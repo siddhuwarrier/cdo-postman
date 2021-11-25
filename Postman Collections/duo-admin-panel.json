@@ -90,12 +90,12 @@
   ],
   "variable": [
     {
-      "id": "9ad9dac1-5ac1-4ecb-adb1-c7b6b2692fc0",
+      "id": "d3ffbe65-2eb2-43a1-9487-3371fdfdd9f8",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "f2ce4282-1ed3-4438-9825-5e65da11b4a3",
+      "id": "d8393d74-8ff8-4ee3-ad10-16da3da6a598",
       "key": "deviceUids",
       "value": ""
     }
