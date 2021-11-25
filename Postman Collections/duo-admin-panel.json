@@ -6,47 +6,6 @@
   },
   "item": [
     {
-      "name": "Get Duo Admin Panel Applications",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "37cc4d9a-8f83-4d5a-88bd-213a67cd8c27",
-            "exec": [
-              "const deviceUids = pm.collectionVariables.get(\"deviceUids\") || [];",
-              "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
-              "console.log(`Query params: ${queryParam}`);",
-              "pm.request.url.query.add(`q=${queryParam}`);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "id": "4f3e4b46-47db-4ee4-a483-fe2d592de94d",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": "{{aegisBaseUrl}}/duo/applications"
-      },
-      "response": []
-    },
-    {
-      "name": "Trigger MFA retrieval job",
-      "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": null
-      },
-      "response": []
-    },
-    {
       "name": "Find Duo Admin Panel Devices in Tenant Copy",
       "event": [
         {
@@ -92,6 +51,47 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get Duo Admin Panel Applications",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "37cc4d9a-8f83-4d5a-88bd-213a67cd8c27",
+            "exec": [
+              "const deviceUids = pm.collectionVariables.get(\"deviceUids\") || [];",
+              "const queryParam = deviceUids.map(deviceUid => `deviceUid:${deviceUid}`).join(\"+OR+\");",
+              "console.log(`Query params: ${queryParam}`);",
+              "pm.request.url.query.add(`q=${queryParam}`);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "4f3e4b46-47db-4ee4-a483-fe2d592de94d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{aegisBaseUrl}}/duo/applications"
+      },
+      "response": []
+    },
+    {
+      "name": "Trigger MFA retrieval job",
+      "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -124,12 +124,12 @@
   ],
   "variable": [
     {
-      "id": "dbc84885-e8c5-43b3-a426-3c3ce0e3876c",
+      "id": "dee094e9-f25a-40e1-a8a1-9a4ba06ffe22",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "a7f9c57b-d30f-4100-bcb1-04ad85a25075",
+      "id": "a0b5e432-304e-4a46-b107-c1b316cddd7d",
       "key": "deviceUids",
       "value": ""
     }
