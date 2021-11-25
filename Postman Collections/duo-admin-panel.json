@@ -6,7 +6,7 @@
   },
   "item": [
     {
-      "name": "New Request",
+      "name": "Get Duo Admin Panel Devices",
       "id": "0af87052-e975-40b1-b8a3-46e5f8bce9b6",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -90,12 +90,12 @@
   ],
   "variable": [
     {
-      "id": "0ee11200-2397-4b84-8dd1-6e0d4d33fb20",
+      "id": "837c9657-98b6-4b02-954e-ab92df2d3daf",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "d51e3ec9-c484-41fa-a87c-0feb347d34a2",
+      "id": "514a3120-aae1-4412-815c-fec7e9972e64",
       "key": "deviceUids",
       "value": ""
     }
