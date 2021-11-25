@@ -34,7 +34,7 @@
       "response": []
     },
     {
-      "name": "Trigger OOB Detection for Southbound Device",
+      "name": "Trigger MFA retrieval",
       "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -77,12 +77,12 @@
   ],
   "variable": [
     {
-      "id": "0877c124-8dac-4529-a654-2349d1c51cac",
+      "id": "ba003320-0d73-4feb-8485-bf3b60eb88a2",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "6349e0d9-8cb3-4400-b7bc-6e83df586a19",
+      "id": "2f7908e0-3b9f-4e44-b349-edba51af6585",
       "key": "deviceUids",
       "value": ""
     }
