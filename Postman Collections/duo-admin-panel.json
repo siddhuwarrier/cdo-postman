@@ -34,7 +34,7 @@
       "response": []
     },
     {
-      "name": "Trigger MFA retrieval",
+      "name": "Trigger MFA retrieval job",
       "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -77,12 +77,12 @@
   ],
   "variable": [
     {
-      "id": "ba003320-0d73-4feb-8485-bf3b60eb88a2",
+      "id": "aaa6e809-8e23-4ad3-a383-14397e1f6785",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "2f7908e0-3b9f-4e44-b349-edba51af6585",
+      "id": "5f26f8fe-6423-4a5f-b6f0-94cad606cde8",
       "key": "deviceUids",
       "value": ""
     }
