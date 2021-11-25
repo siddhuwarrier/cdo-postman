@@ -82,14 +82,41 @@
     },
     {
       "name": "Trigger MFA retrieval job",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "027ecc0c-032e-4900-8451-a363ca09f042",
+            "exec": [
+              "const jobTrigger = {",
+              "    \"action\": \"WRITE\",",
+              "    \"queueTriggerState\": \"GET_MFA_EVENTS\",",
+              "    \"objRefs\": []",
+              "};",
+              "console.log(pm.collectionVariables.get(\"duoAdminPanelDeviceUids\"));",
+              "const deviceUids = pm.collectionVariables.get(\"duoAdminPanelDeviceUids\") || [];",
+              "deviceUids.forEach(deviceUid => {",
+              "    jobTrigger.objRefs.push({",
+              "        \"uid\": deviceUid,",
+              "        \"namespace\": \"targets\",",
+              "        \"type\": \"devices\"",
+              "    });",
+              "});",
+              "console.log(\"Job Trigger Body: \", jobTrigger);",
+              "pm.collectionVariables.set('reqBody', JSON.stringify(jobTrigger));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "773d9079-117d-47f0-a589-edf6d380d8b5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "url": "{{aegisBaseUrl}}/state-machines/jobs"
       },
       "response": []
     }
@@ -124,22 +151,22 @@
   ],
   "variable": [
     {
-      "id": "5672b3d4-645c-47a2-a35d-272d2d75841e",
+      "id": "74d4171a-40c3-4567-ac9a-f9bf8f427405",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "9decf703-ba10-4553-a086-eb33fca6c1ef",
+      "id": "6bce9b60-b19c-4a4d-86ab-ed0f707bd235",
       "key": "deviceUids",
       "value": ""
     },
     {
-      "id": "32146888-41c4-4977-a1d2-a5bbb2efd213",
+      "id": "86565fcc-8a42-4282-b270-5b64599acc5f",
       "key": "duoAdminPanelDeviceUids",
       "value": ""
     },
     {
-      "id": "a53482a6-8718-4c0b-990b-da3d88ff41de",
+      "id": "a5885255-69ab-4b11-85b3-2b25e61b61b2",
       "key": "reqBody",
       "value": ""
     }
