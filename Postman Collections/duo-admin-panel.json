@@ -124,18 +124,23 @@
   ],
   "variable": [
     {
-      "id": "d2b174b7-f84a-4c28-9f9b-7a672a926b29",
+      "id": "5672b3d4-645c-47a2-a35d-272d2d75841e",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "2b8245c5-fd2b-4dd8-bf06-93afc133daec",
+      "id": "9decf703-ba10-4553-a086-eb33fca6c1ef",
       "key": "deviceUids",
       "value": ""
     },
     {
-      "id": "a041eeec-e511-4abe-b2c7-715d6670d0c2",
+      "id": "32146888-41c4-4977-a1d2-a5bbb2efd213",
       "key": "duoAdminPanelDeviceUids",
+      "value": ""
+    },
+    {
+      "id": "a53482a6-8718-4c0b-990b-da3d88ff41de",
+      "key": "reqBody",
       "value": ""
     }
   ]
