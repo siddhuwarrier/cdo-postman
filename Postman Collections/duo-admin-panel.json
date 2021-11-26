@@ -15,8 +15,7 @@
             "exec": [
               "const devices = pm.response.json();",
               "const deviceUids = devices.map((device) => device.uid);",
-              "pm.collectionVariables.set(\"duoAdminPanelDeviceUids\", deviceUids);",
-              "pm.test(devices.length === 1);"
+              "pm.collectionVariables.set(\"duoAdminPanelDeviceUids\", deviceUids);"
             ],
             "type": "text/javascript"
           }
@@ -151,22 +150,22 @@
   ],
   "variable": [
     {
-      "id": "74d4171a-40c3-4567-ac9a-f9bf8f427405",
+      "id": "f9d65fe7-5e30-4790-8376-f75106c31a51",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "6bce9b60-b19c-4a4d-86ab-ed0f707bd235",
+      "id": "b5b12864-daf5-468b-a066-af170a45c08b",
       "key": "deviceUids",
       "value": ""
     },
     {
-      "id": "86565fcc-8a42-4282-b270-5b64599acc5f",
+      "id": "17b29804-a3f5-4aff-9e2d-e063b0782d6a",
       "key": "duoAdminPanelDeviceUids",
       "value": ""
     },
     {
-      "id": "a5885255-69ab-4b11-85b3-2b25e61b61b2",
+      "id": "98dd2376-a62c-4e1e-b481-79876d7ca111",
       "key": "reqBody",
       "value": ""
     }
