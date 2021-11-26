@@ -88,8 +88,8 @@
             "id": "027ecc0c-032e-4900-8451-a363ca09f042",
             "exec": [
               "const jobTrigger = {",
-              "    \"action\": \"WRITE\",",
-              "    \"queueTriggerState\": \"GET_MFA_EVENTS\",",
+              "    \"action\": \"GET_MFA_EVENTS\",",
+              "    \"queueTriggerState\": \"PENDING_ORCHESTRATION\",",
               "    \"objRefs\": []",
               "};",
               "console.log(pm.collectionVariables.get(\"duoAdminPanelDeviceUids\"));",
@@ -114,7 +114,17 @@
       },
       "request": {
         "method": "POST",
-        "header": [],
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{{reqBody}}"
+        },
         "url": "{{aegisBaseUrl}}/state-machines/jobs"
       },
       "response": []
@@ -150,22 +160,22 @@
   ],
   "variable": [
     {
-      "id": "f9d65fe7-5e30-4790-8376-f75106c31a51",
+      "id": "a591003f-35cc-40b6-9690-51b4cd963ce4",
       "key": "firstDeviceUid",
       "value": ""
     },
     {
-      "id": "b5b12864-daf5-468b-a066-af170a45c08b",
+      "id": "bf147733-2ab3-48cd-bc9d-56b8960a9a3c",
       "key": "deviceUids",
       "value": ""
     },
     {
-      "id": "17b29804-a3f5-4aff-9e2d-e063b0782d6a",
+      "id": "97f929e9-e15b-4a06-8374-65212e6ce3f9",
       "key": "duoAdminPanelDeviceUids",
       "value": ""
     },
     {
-      "id": "98dd2376-a62c-4e1e-b481-79876d7ca111",
+      "id": "0a31022a-aa6b-4cb4-9c44-4ce8146d8725",
       "key": "reqBody",
       "value": ""
     }
