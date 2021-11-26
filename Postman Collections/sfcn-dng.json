@@ -469,7 +469,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{aegisBaseUrl}}/dng/webapplications/1078cb4e-72e1-4134-ae9b-da40c9999f24"
+            "url": "{{aegisBaseUrl}}/dng/webapplications/b4ab3f4e-e9dc-4508-92ab-06d6f5fd1ad4"
           },
           "response": []
         }
@@ -507,37 +507,37 @@
   ],
   "variable": [
     {
-      "id": "64e40d1a-2f53-49b1-9544-fb91fe612a28",
+      "id": "34f9b4a6-48ec-40f7-b3be-2bef95451ca3",
       "key": "queryParameter",
       "value": "q=deviceType:SFCN_DNG"
     },
     {
-      "id": "38c4e2c6-36d4-414f-9d6b-c1fdb14bfa78",
+      "id": "aad9e335-5761-493d-a4f5-5bbd775e892c",
       "key": "modifiedDevieUid",
       "value": ""
     },
     {
-      "id": "f012a98a-1834-435c-941a-57175d651482",
+      "id": "c60a6db0-8093-47d3-b9db-c85cfdb66c6d",
       "key": "sfcnDngDeviceUids",
       "value": ""
     },
     {
-      "id": "43449a0d-0c7c-4aa4-a885-c1f8ec84d9e5",
+      "id": "e54a75c9-e17e-43db-a821-2f27eb18d725",
       "key": "webAppUid",
       "value": ""
     },
     {
-      "id": "43105e5c-0851-44b4-a2bd-b0e1cb40a278",
+      "id": "789d9bed-970d-454a-8912-bbe61b4eaee9",
       "key": "modifiedDeviceUid",
       "value": ""
     },
     {
-      "id": "dfc589d2-178e-40e7-b864-c8e2ffe566f9",
+      "id": "1711e793-7832-4384-9ee3-f6108b9d066b",
       "key": "reqBody",
       "value": ""
     },
     {
-      "id": "e30a54e0-7ad0-4357-9746-1c5419c7ea2c",
+      "id": "e82aa6ec-ccf4-4561-80f1-7a47a127cbc2",
       "key": "sfcnDngDeviceUid",
       "value": ""
     }
